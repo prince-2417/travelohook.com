@@ -1,0 +1,1736 @@
+/* TraveloHook Design System - Deep Teal (#287A74) Theme */
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   Top Bar & Header
+   ========================================================================== */
+.top-hotline-bar {
+  background: #0b132b;
+  color: #cbd5e1;
+  font-size: 13px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.top-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-bar-item.highlight {
+  color: #7cc0ba;
+  font-weight: 600;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #287A74 0%, #1E5E59 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(40, 122, 116, 0.3);
+}
+
+.logo-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.brand-name span {
+  color: #287A74;
+}
+
+.brand-tagline {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.nav-links-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-link-item a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0;
+  position: relative;
+}
+
+.nav-link-item a:hover,
+.nav-link-item.active a {
+  color: #287A74;
+}
+
+.nav-link-item.active a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #287A74;
+  border-radius: 2px;
+}
+
+.navbar-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-phone-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border: 1.5px solid #a6dad6;
+  background: #eef7f6;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-phone-card:hover {
+  background: #d5ecea;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 122, 116, 0.15);
+}
+
+.nav-phone-icon {
+  width: 36px;
+  height: 36px;
+  background: #287A74;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-phone-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-phone-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1E5E59;
+  letter-spacing: 0.6px;
+}
+
+.nav-phone-number {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.2px;
+}
+
+/* Mobile Nav Toggle */
+.mobile-nav-toggle {
+  display: none;
+  font-size: 24px;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   Hero Section & Search Widget
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  background: linear-gradient(180deg, #eef7f6 0%, #ffffff 100%);
+  padding: 50px 0 70px 0;
+  overflow: hidden;
+}
+
+.hero-backdrop-glow {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(40, 122, 116, 0.15) 0%, rgba(56, 163, 156, 0.1) 50%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: #fff;
+  border: 1px solid #a6dad6;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1E5E59;
+  box-shadow: 0 2px 8px rgba(40, 122, 116, 0.1);
+  margin-bottom: 18px;
+}
+
+.hero-pill-badge .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0f172a;
+  max-width: 900px;
+  margin: 0 auto 16px auto;
+  letter-spacing: -0.8px;
+}
+
+.hero-title .highlight-blue,
+.hero-title .highlight-teal {
+  color: #287A74;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title .highlight-blue::after,
+.hero-title .highlight-teal::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 8px;
+  background: rgba(40, 122, 116, 0.16);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.hero-subtitle {
+  font-size: 17px;
+  color: #475569;
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Flight Search Engine Container */
+.search-widget-wrapper {
+  position: relative;
+  z-index: 10;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(226, 232, 240, 0.8);
+  padding: 24px 28px;
+  margin: 0 auto;
+}
+
+/* Tabs: Round trip / One way / Multi city */
+.search-tabs-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.trip-type-options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trip-type-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  background: #f8fafc;
+  transition: all 0.2s;
+}
+
+.trip-type-btn.active {
+  background: #eef7f6;
+  color: #1E5E59;
+  border: 1.5px solid #7cc0ba;
+}
+
+.trip-quick-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #287A74;
+}
+
+/* Search Fields Grid */
+.search-inputs-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 48px 1.2fr 1fr 1fr 1.3fr auto;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.search-field-box {
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.search-field-box:focus-within,
+.search-field-box:hover {
+  border-color: #287A74;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(40, 122, 116, 0.08);
+}
+
+.field-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 2px;
+}
+
+.field-value-primary {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 0;
+}
+
+.field-value-sub {
+  font-size: 11px;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.swap-btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swap-places-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.swap-places-btn:hover {
+  border-color: #287A74;
+  color: #287A74;
+  transform: rotate(180deg);
+}
+
+.btn-search-flights {
+  height: 60px;
+  padding: 0 28px;
+  background: linear-gradient(135deg, #287A74 0%, #1E5E59 100%);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: var(--shadow-primary);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-search-flights:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -4px rgba(40, 122, 116, 0.45);
+  background: linear-gradient(135deg, #38A39C 0%, #1E5E59 100%);
+}
+
+/* Search Filters Sub-Bar */
+.search-sub-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed #e2e8f0;
+  font-size: 13px;
+  color: #475569;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.search-checkboxes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.search-checkbox-label input {
+  accent-color: #287A74;
+}
+
+.search-promo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0fdf4;
+  color: #166534;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbf7d0;
+}
+
+/* ==========================================================================
+   Trust / Value Proposition Cards (4 Cards)
+   ========================================================================== */
+.trust-cards-section {
+  padding: 24px 0 50px 0;
+  background: #ffffff;
+}
+
+.trust-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.trust-card {
+  background: #ffffff;
+  border: 1.5px solid #f1f5f9;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.trust-card:hover {
+  transform: translateY(-4px);
+  border-color: #7cc0ba;
+  box-shadow: 0 12px 24px -4px rgba(40, 122, 116, 0.1);
+}
+
+.trust-card-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #eef7f6;
+  border: 1px solid #a6dad6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #287A74;
+  margin-bottom: 16px;
+}
+
+.trust-card-title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.trust-card-desc {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+/* 4th Card: Highlighted Teal VIP Support Card */
+.trust-card.highlight-support {
+  background: linear-gradient(135deg, #287A74 0%, #164642 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: var(--shadow-primary);
+}
+
+.trust-card.highlight-support:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -4px rgba(40, 122, 116, 0.45);
+}
+
+.trust-card.highlight-support .trust-card-icon-wrap {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.trust-card.highlight-support .trust-card-title {
+  color: #ffffff;
+}
+
+.trust-card.highlight-support .trust-card-desc {
+  color: #d5ecea;
+  margin-bottom: 16px;
+}
+
+.btn-card-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #ffffff;
+  color: #1E5E59;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-card-call:hover {
+  background: #eef7f6;
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+   Exclusive Flight Deals (Main Flight Grid)
+   ========================================================================== */
+.deals-section {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+
+.section-head-wrap {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 36px auto;
+}
+
+.section-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #287A74;
+  background: #eef7f6;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.section-main-title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.section-main-title span {
+  color: #287A74;
+}
+
+.section-sub-desc {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Filter categories */
+.deals-filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+}
+
+.deals-filter-chip {
+  padding: 8px 20px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.deals-filter-chip:hover {
+  border-color: #7cc0ba;
+  color: #1E5E59;
+}
+
+.deals-filter-chip.active {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+/* Deals Grid: 3 columns */
+.deals-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.flight-deal-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.flight-deal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 30px -8px rgba(15, 23, 42, 0.12);
+  border-color: #a6dad6;
+}
+
+.card-image-box {
+  position: relative;
+  height: 170px;
+  overflow: hidden;
+}
+
+.card-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.flight-deal-card:hover .card-image-box img {
+  transform: scale(1.08);
+}
+
+.card-top-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+}
+
+.card-deal-discount {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #287A74;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(40, 122, 116, 0.4);
+}
+
+.card-body-content {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-route-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.card-city-name {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.card-route-codes {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.card-travel-specs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12.5px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.card-price-row {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-meta-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label-text {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.price-actual-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.price-original {
+  font-size: 14px;
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.price-discounted {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  color: #1E5E59;
+  line-height: 1;
+}
+
+.btn-card-book {
+  padding: 8px 18px;
+  background: #eef7f6;
+  color: #1E5E59;
+  border: 1.5px solid #7cc0ba;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.flight-deal-card:hover .btn-card-book {
+  background: #287A74;
+  color: #ffffff;
+  border-color: #287A74;
+}
+
+/* ==========================================================================
+   Cheap Flights to USA Spotlight Banners (4 Large Visual Cards)
+   ========================================================================== */
+.spotlight-section {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.spotlight-card {
+  position: relative;
+  height: 340px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spotlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.2);
+}
+
+.spotlight-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.6s ease;
+}
+
+.spotlight-card:hover .spotlight-card-bg {
+  transform: scale(1.08);
+}
+
+.spotlight-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.2) 0%, rgba(15, 23, 42, 0.85) 100%);
+  z-index: 1;
+}
+
+.spotlight-top-badge {
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
+  background: #287A74;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.spotlight-bottom-info {
+  position: relative;
+  z-index: 2;
+}
+
+.spotlight-city-title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.spotlight-subtext {
+  font-size: 13px;
+  color: #e2e8f0;
+  margin-bottom: 14px;
+}
+
+.spotlight-call-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.spotlight-call-box:hover {
+  background: rgba(40, 122, 116, 0.9);
+  border-color: #287A74;
+}
+
+.spotlight-call-number {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   Trust SEO & Why Choose TraveloHook Section
+   ========================================================================== */
+.why-us-section {
+  padding: 70px 0;
+  background: #f8fafc;
+}
+
+.why-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.why-feature-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 26px 22px;
+  transition: all 0.25s;
+}
+
+.why-feature-box:hover {
+  border-color: #7cc0ba;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -5px rgba(40, 122, 116, 0.08);
+}
+
+.why-feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #eef7f6;
+  color: #1E5E59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.why-feature-title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.why-feature-desc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+/* SEO Content Box */
+.seo-article-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.seo-article-title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.seo-article-p {
+  font-size: 14.5px;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.seo-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: #eef7f6;
+  color: #1E5E59;
+  font-weight: 700;
+  font-size: 13.5px;
+  border-radius: 8px;
+  border: 1px solid #a6dad6;
+  margin-top: 8px;
+  transition: all 0.2s;
+}
+
+.seo-toggle-btn:hover {
+  background: #d5ecea;
+}
+
+/* ==========================================================================
+   Airlines Partner Strip
+   ========================================================================== */
+.airlines-strip-section {
+  padding: 36px 0;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.airlines-strip-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.airline-badge-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: #475569;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+/* ==========================================================================
+   Testimonials
+   ========================================================================== */
+.testimonials-section {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.review-stars {
+  display: flex;
+  gap: 3px;
+  color: #f59e0b;
+  margin-bottom: 12px;
+}
+
+.review-text {
+  font-size: 14.5px;
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+.review-author-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #d5ecea;
+  color: #1E5E59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.review-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.review-sub {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ==========================================================================
+   FAQ Section (Accordion)
+   ========================================================================== */
+.faq-section {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+.faq-accordion-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item-card {
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faq-item-card.open {
+  border-color: #7cc0ba;
+  box-shadow: 0 4px 14px rgba(40, 122, 116, 0.08);
+}
+
+.faq-question-btn {
+  width: 100%;
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  background: #ffffff;
+  transition: color 0.2s;
+}
+
+.faq-question-btn:hover {
+  color: #287A74;
+}
+
+.faq-icon-indicator {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #eef7f6;
+  color: #1E5E59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.faq-item-card.open .faq-icon-indicator {
+  transform: rotate(180deg);
+  background: #287A74;
+  color: #ffffff;
+}
+
+.faq-answer-drawer {
+  padding: 0 22px 20px 22px;
+  font-size: 14.5px;
+  color: #475569;
+  line-height: 1.65;
+  border-top: 1px solid #f8fafc;
+}
+
+/* ==========================================================================
+   Callout Banner (Urgent Phone Discount)
+   ========================================================================== */
+.phone-promo-banner-section {
+  padding: 40px 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+}
+
+.phone-promo-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.phone-promo-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.promo-call-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: #287A74;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(40, 122, 116, 0.4);
+}
+
+.promo-call-title {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.promo-call-title span {
+  color: #48b8b0;
+}
+
+.promo-call-desc {
+  font-size: 14.5px;
+  color: #cbd5e1;
+}
+
+.phone-promo-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-urgent-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: #287A74;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 8px 20px rgba(40, 122, 116, 0.4);
+}
+
+.btn-urgent-call:hover {
+  background: #1E5E59;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background: #070d1e;
+  color: #94a3b8;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.3fr;
+  gap: 36px;
+  margin-bottom: 50px;
+}
+
+.footer-col-title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 24px;
+  height: 2px;
+  background: #287A74;
+  border-radius: 2px;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links-list a {
+  font-size: 13.5px;
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.footer-links-list a:hover {
+  color: #48b8b0;
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #cbd5e1;
+}
+
+.footer-contact-item svg {
+  color: #48b8b0;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 12.5px;
+  color: #64748b;
+  text-align: center;
+}
+
+.footer-disclaimer {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Interactive Flight Search / Booking Modal
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.flight-modal-card {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 780px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.modal-close-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+
+.modal-close-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flight-result-item {
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.2s;
+  flex-wrap: wrap;
+}
+
+.flight-result-item:hover {
+  border-color: #287A74;
+  box-shadow: 0 6px 16px rgba(40, 122, 116, 0.08);
+}
+
+.flight-result-times {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.flight-node {
+  display: flex;
+  flex-direction: column;
+}
+
+.flight-time {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.flight-airport {
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.flight-duration-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 110px;
+}
+
+.duration-text {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.track-line {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #e2e8f0;
+  margin: 6px 0;
+}
+
+.track-line::before {
+  content: '✈';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #287A74;
+  font-size: 12px;
+}
+
+.stops-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.flight-price-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.modal-phone-callout {
+  background: #eef7f6;
+  border: 1px dashed #7cc0ba;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   Navigation Dropdown & Mobile Drawer
+   ========================================================================== */
+.dest-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  background: #ffffff;
+  border: 1.5px solid #a6dad6;
+  border-radius: 14px;
+  box-shadow: 0 14px 28px -4px rgba(15, 23, 42, 0.12);
+  padding: 10px 0;
+  z-index: 1000;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dest-dropdown-menu a {
+  padding: 10px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #334155;
+  transition: all 0.15s;
+  display: block;
+}
+
+.dest-dropdown-menu a:hover {
+  background: #eef7f6;
+  color: #287A74;
+  padding-left: 22px;
+}
+
+.mobile-drawer {
+  padding: 20px 24px;
+  background: #ffffff;
+  border-bottom: 2px solid #eef7f6;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-drawer a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  padding: 6px 0;
+}
+
+.mobile-drawer-subheading {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.6px;
+  margin-top: 8px;
+}
+
+.footer-badge-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+@media (max-width: 1180px) {
+  .search-inputs-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .swap-btn-wrap {
+    display: none;
+  }
+  .deals-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spotlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trust-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .why-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-hotline-bar {
+    display: none;
+  }
+  .nav-links-list {
+    display: none;
+  }
+  .mobile-nav-toggle {
+    display: block;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+  .hero-subtitle {
+    font-size: 15px;
+  }
+  .search-inputs-grid {
+    grid-template-columns: 1fr;
+  }
+  .btn-search-flights {
+    width: 100%;
+  }
+  .deals-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .spotlight-grid {
+    grid-template-columns: 1fr;
+  }
+  .trust-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+}
