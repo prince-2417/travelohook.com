@@ -91,7 +91,7 @@ export default function FlightSearchWidget({ defaultOrigin = 'New York (JFK)', d
                 placeholder="Enter city or airport"
                 required
               />
-              <span className="field-value-sub">All major airports</span>
+              <span className="field-value-sub">All major airport</span>
             </div>
 
             {/* Swap Button */}
